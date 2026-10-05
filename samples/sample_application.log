@@ -1,0 +1,30 @@
+2026-09-30 10:00:01,120 - INFO - [system] - Application service initialized on port 8080
+2026-09-30 10:00:05,432 - DEBUG - [cache] - Redis connection established at 10.0.0.4:6379
+2026-09-30 10:00:15,891 - INFO - [auth] - User logged in successfully: user_id=1001 session=a8b3-99cf
+2026-09-30 10:01:22,012 - WARNING - [db_pool] - Database connection pool usage exceeded 80% (16/20 connections active)
+2026-09-30 10:02:11,540 - ERROR - [db_pool] - Connection refused: host=db-replica-1:5432
+2026-09-30 10:02:15,102 - INFO - [auth] - User logged in successfully: user_id=1002 session=bb12-34ef
+2026-09-30 10:03:00,000 - WARNING - [cache] - High cache miss rate detected on keyspace 'orders' (45% miss rate)
+2026-09-30 10:03:45,901 - ERROR - [payment_service] - Read timed out while contacting payment gateway api.stripe.com after 5000ms
+2026-09-30 10:04:10,230 - ERROR - [db_pool] - Connection refused: host=db-replica-1:5432
+2026-09-30 10:05:01,872 - INFO - [api_gateway] - GET /api/v1/products - 200 OK (duration=12ms)
+2026-09-30 10:05:33,401 - ERROR - [db_pool] - Connection refused: host=db-replica-2:5432
+2026-09-30 10:06:12,112 - WARNING - [disk] - Low disk space on /var/log: 12% remaining
+2026-09-30 10:07:05,621 - ERROR - [auth] - Unauthorized: 401 Invalid JWT token signature for request from 192.168.1.55
+2026-09-30 10:07:44,321 - ERROR - [payment_service] - Read timed out while contacting payment gateway api.stripe.com after 5000ms
+2026-09-30 10:08:12,001 - INFO - [api_gateway] - POST /api/v1/checkout - 201 Created (duration=154ms)
+2026-09-30 10:09:20,551 - CRITICAL - [system] - Out of memory: Java heap space exhausted during PDF report batch generation
+2026-09-30 10:10:02,120 - ERROR - [auth] - Unauthorized: 401 Invalid JWT token signature for request from 192.168.1.88
+2026-09-30 10:11:15,443 - ERROR - [order_service] - Unhandled exception in order processing pipeline
+Traceback (most recent call last):
+  File "/app/services/order_service.py", line 142, in process_order
+    tax = calculate_tax(order.shipping_address)
+  File "/app/services/tax_calc.py", line 33, in calculate_tax
+    return base_rate * region.rate
+AttributeError: 'NoneType' object has no attribute 'rate'
+2026-09-30 10:12:00,100 - INFO - [api_gateway] - GET /health - 200 OK
+CORRUPT_LOG_ENTRY_WITHOUT_TIMESTAMP_OR_LEVEL
+   Another random corrupted text line
+2026-09-30 10:13:45,992 - ERROR - [payment_service] - Read timed out while contacting payment gateway api.stripe.com after 5000ms
+2026-09-30 10:14:10,001 - WARNING - [db_pool] - Database connection pool usage exceeded 90% (18/20 connections active)
+2026-09-30 10:15:00,231 - INFO - [system] - Hourly log compaction completed successfully
